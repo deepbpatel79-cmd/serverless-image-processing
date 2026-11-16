@@ -4,13 +4,7 @@
 
 This project uses AWS services to automatically resize images uploaded to an Amazon S3 bucket. The resized images are saved in a separate S3 bucket.
 
-## 2. Team Members
-
-- Deep Patel
-- Harsh Viradiya
-- Dvij Patel
-
-## 3. AWS Services Used
+## 2. AWS Services Used
 
 - Amazon S3 – Stores original and resized images.
 - AWS Lambda – Resizes images using Python.
@@ -20,7 +14,7 @@ This project uses AWS services to automatically resize images uploaded to an Ama
 - Amazon API Gateway – Starts the Step Functions execution.
 - Amazon CloudWatch – Stores execution logs.
 
-## 4. Project Structure
+## 3. Project Structure
 
 ```text
 Serverless Image Processing/
@@ -33,7 +27,7 @@ Serverless Image Processing/
 └── README.md
 ```
 
-## 5. S3 Bucket Configuration
+## 4. S3 Bucket Configuration
 
 **Original Images Bucket**
 
@@ -43,7 +37,7 @@ Serverless Image Processing/
 
 `deep-harsh-dvij-resized-images-2026`
 
-## 6. Lambda Configuration
+## 5. Lambda Configuration
 
 - Function name: `ImageResizerFunction`
 - Runtime: Python 3.12
@@ -53,7 +47,7 @@ Serverless Image Processing/
 
 The Lambda function downloads an uploaded image, resizes it to a maximum size of 800 × 800 pixels, and uploads the resized image to the output bucket.
 
-## 7. Step Functions Workflow
+## 6. Step Functions Workflow
 
 State machine name: `ImageProcessingStateMachine`
 
@@ -64,7 +58,7 @@ The workflow contains:
 3. Success – Completes the workflow successfully.
 4. Fail – Handles unsuccessful processing.
 
-## 8. API Gateway Configuration
+## 7. API Gateway Configuration
 
 - API name: `ImageProcessingAPI`
 - Method: POST
@@ -75,7 +69,7 @@ API Endpoint:
 
 `https://htos9gd1vj.execute-api.us-east-2.amazonaws.com/prod`
 
-## 9. Testing Results
+## 8. Testing Results
 
 The project was tested using Postman.
 
@@ -83,7 +77,7 @@ The project was tested using Postman.
 - Step Functions execution completed successfully.
 - The image processing workflow was tested using an S3 image event.
 
-## 10. Deployment Instructions
+## 9. Deployment Instructions
 
 1. Create two Amazon S3 buckets.
 2. Create the Lambda function using Python 3.12.
@@ -96,7 +90,7 @@ The project was tested using Postman.
 9. Test the API using Postman.
 10. Verify the resized image in the output bucket.
 
-## 11. AWS Resource Details
+## 10. AWS Resource Details
 
 **AWS Region:** `us-east-2`
 
@@ -110,7 +104,7 @@ The project was tested using Postman.
 
 `https://htos9gd1vj.execute-api.us-east-2.amazonaws.com/prod`
 
-## 12. Demonstration Video
+## 11. Demonstration Video
 
 The project demonstration video will be included with the final submission.
 
